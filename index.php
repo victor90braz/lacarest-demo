@@ -9,16 +9,17 @@
     <link rel="icon" href="public/images/logo.png" type="image/x-icon">
     <title>Privalia Shop</title>
     <style>
-        *{
+        * {
             box-sizing: border-box;
             margin: 0;
+            padding: 0;
         }
 
-        body{
+        body {
             font-family: 'Roboto', sans-serif;
         }
 
-        .container{
+        .container {
             height: 100vh;
             background: #D47597;
             padding: 20px;
@@ -26,8 +27,6 @@
 
         .container-header {
             display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
             justify-content: space-around;
             align-items: center;
             padding: 5px;
@@ -36,10 +35,6 @@
         img {
             width: 20px;
             height: 20px;
-        }
-
-        .container-menu {
-            padding: 0;
         }
 
         .container-menu, .container-title, .container-info {
@@ -51,7 +46,6 @@
         }
 
         .container-menu {
-            display: flex;
             flex-direction: column;
         }
 
@@ -61,7 +55,7 @@
 
         .title {
             font-size: 1.1em;
-            color: white; /* Added text color for the title */
+            color: white;
         }
 
         .container-info {
@@ -69,8 +63,6 @@
         }
 
         .container-info_about {
-            display: flex;
-            align-items: center;
             flex-direction: column;
         }
 
@@ -91,22 +83,21 @@
             justify-content: center;
             height: 70vh;
         }
+
         .container-main_greeting {
             text-transform: uppercase;
             font-weight: bold;
         }
 
-        .container-main_categories{
-            padding: 10px
+        .container-main_categories {
+            padding: 10px;
         }
-        .container-main_categories ul{
+
+        .container-main_categories ul {
             display: flex;
             list-style-type: none;
-            flex-direction: row;
             justify-content: space-evenly;
-            align-content: center;
             align-items: center;
-            width: 100%;
             padding: 0;
         }
 
@@ -117,79 +108,61 @@
             border-radius: 5px;
             cursor: pointer;
         }
-
     </style>
 </head>
 <body>
 <?php
-    $pathImageMenu = "public/images/menu.png";
-    $menu = "menu";
-    $descriptionMenu = "menu icon";
+$pathImages = [
+    "menu" => "public/images/menu.png",
+    "logo" => "public/images/logo.png",
+    "info" => "public/images/info.png",
+];
 
-    $pathImageLogo = "public/images/logo.png";
-    $title = "privalia shop";
-    $descriptionTitle = "menu icon";
+$menu = "menu";
+$title = "privalia shop";
+$aboutUs = "about us";
+$register = "register";
+$logged = true;
 
-    $pathImageInfo = "public/images/info.png";
-    $descriptionInfo = "info icon";
-    $aboutUs = "about us";
+$greeting = !$logged ? "Please $register" : "Welcome to $title";
 
-    $register = "register";
-
-    $logged = true;
-    $greeting = "";
-
-    if (!$logged) {
-        $greeting =  "Please " . $register;
-    } else {
-        $greeting =  "Welcome to " . $title;
-    }
-
-    $categories = [
-            "all categories","children's","fashion & beauty",
-            "footwear","home & tech","sports","travel","gourmet"
-    ];
-
-
+$categories = [
+    "all categories", "children's", "fashion & beauty",
+    "footwear", "home & tech", "sports", "travel", "gourmet"
+];
 ?>
 
 <div class="container">
     <header class="container-header">
         <menu class="container-menu">
-            <img src="<?php echo $pathImageMenu ?>" alt="<?php echo $descriptionMenu ?>" />
-            <span><?php echo $menu ?></span>
+            <img src="<?= $pathImages['menu'] ?>" alt="Menu Icon" />
+            <span><?= $menu ?></span>
         </menu>
 
         <section class="container-title">
-            <img src="<?php echo $pathImageLogo ?>" alt="<?php echo $descriptionTitle ?>" />
-            <h1 class="title"><?php echo $title ?></h1>
+            <img src="<?= $pathImages['logo'] ?>" alt="Logo" />
+            <h1 class="title"><?= $title ?></h1>
         </section>
 
         <section class="container-info">
             <div class="container-info_about">
-                <img class="info-image" src="<?php echo $pathImageInfo ?>" alt="<?php echo $descriptionInfo ?>" />
-                <span><?php echo $aboutUs ?></span>
+                <img class="info-image" src="<?= $pathImages['info'] ?>" alt="Info Icon" />
+                <span><?= $aboutUs ?></span>
             </div>
-            <span class="container-info_register"><?php echo $register ?></span>
+            <span class="container-info_register"><?= $register ?></span>
         </section>
     </header>
 
     <nav class="container-main_categories">
         <ul>
-            <li>
-                <?php
-                foreach ($categories as $category) {
-                    echo "<li>$category</li>";
-                }
-                ?>
-            </li>
+            <?php foreach ($categories as $category) : ?>
+                <li><?= $category ?></li>
+            <?php endforeach; ?>
         </ul>
     </nav>
 
     <main class="container-main">
-        <span class="container-main_greeting">
-            <?= $greeting ?>
-        </span>
+        <span class="container-main_greeting"><?= $greeting ?></span>
     </main>
 </div>
 </body>
