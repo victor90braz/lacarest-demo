@@ -24,7 +24,7 @@
             padding: 20px;
         }
 
-        header {
+        .container-header {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
@@ -102,7 +102,7 @@
 ?>
 
 <div class="container">
-    <header>
+    <header class="container-header">
         <menu class="container-menu">
             <img src="<?php echo $pathImageMenu ?>" alt="<?php echo $descriptionMenu ?>" />
             <span><?php echo $menu ?></span>
