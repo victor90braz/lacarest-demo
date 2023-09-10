@@ -15,7 +15,7 @@ terminal CMD
 - PHP -S localhost:8888
 
 
-Double Quotes (`" "):
+Double Quotes (" "):
 
 Variables enclosed in double quotes will be replaced with their values. This is known as variable interpolation.
 Escape sequences (e.g., \n, \t, \") are interpreted and converted to special characters.
