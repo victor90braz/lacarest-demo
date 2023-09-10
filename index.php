@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -29,7 +29,7 @@
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-around;
-            align-items: center
+            align-items: center;
         }
 
         img {
@@ -60,6 +60,7 @@
 
         .title {
             font-size: 1.1em;
+            color: white; /* Added text color for the title */
         }
 
         .container-info {
@@ -78,43 +79,47 @@
             border-radius: 5px;
         }
 
-        .info-image{
+        .info-image {
             margin: 2px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <menu class="container-menu">
-                <img src="public/images/menu.png" alt="menu icon" />
-                <span>Menu</span>
-            </menu>
+<?php
+    $menu = "menu";
+    $pathImageMenu = "public/images/menu.png";
+    $descriptionMenu = "menu icon";
 
-            <section class="container-title">
-                <img src="public/images/logo.png" alt="logo icon" />
-                <h1 class="title">
-                    <?php
-                    $title = "privalia shop";
-                    echo $title;
-                    ?>
-                </h1>
-            </section>
+    $pathImageLogo = "public/images/logo.png";
+    $title = "privalia shop";
+    $descriptionTitle = "menu icon";
 
-            <section class="container-info">
-                <?php
-                $aboutUs = "about us";
-                $register = "register"
-                ?>
+    $pathImageInfo = "public/images/info.png";
+    $descriptionInfo = "info icon";
+    $aboutUs = "about us";
+    $register = "register";
+?>
 
-                <div class="container-info_about">
-                    <img class="info-image" src="public/images/info.png" alt="info icon" />
-                    <span ><?php echo $aboutUs ?></span>
-                </div>
+<div class="container">
+    <header>
+        <menu class="container-menu">
+            <img src="<?php echo $pathImageMenu; ?>" alt="<?php echo $descriptionMenu; ?>" />
+            <span><?php echo $menu ?></span>
+        </menu>
 
-                <span class="container-info_register"><?php echo $register ?></span>
-            </section>
-        </header>
-    </div>
+        <section class="container-title">
+            <img src="<?php echo $pathImageLogo ?>" alt="<?php echo $descriptionTitle ?>" />
+            <h1 class="title"><?php echo $title; ?></h1>
+        </section>
+
+        <section class="container-info">
+            <div class="container-info_about">
+                <img class="info-image" src="<?php echo $pathImageInfo ?>" alt="<?php echo $descriptionInfo ?>" />
+                <span><?php echo $aboutUs ?></span>
+            </div>
+            <span class="container-info_register"><?php echo $register ?></span>
+        </section>
+    </header>
+</div>
 </body>
 </html>
