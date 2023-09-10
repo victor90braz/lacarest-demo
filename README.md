@@ -1,5 +1,5 @@
 ```markdown
-# Personal Notes
+# GitHub: https://github.com/victor90braz/privalia-shop
 
 ## Laravel Setup with Laragon
 
