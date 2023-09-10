@@ -41,7 +41,8 @@
 
 - Variables inside single quotes are not interpolated; they are treated as literal strings.
 
-- Escape sequences are not interpreted within single quotes. Everything inside single quotes is treated as a plain string.
+- Escape sequences are not interpreted within single quotes. 
+- Everything inside single quotes is treated as a plain string.
 
 - Example:
   ```php
@@ -50,4 +51,20 @@
   // Outputs: Hello, $name!
   ```
 
+The differences between the two code snippets you provided are related to how you output variables in PHP:
 
+1. **Using `<?= ... ?>` (Short Echo Tags):**
+   ```html
+   <img src="<?= $pathImages['logo'] ?>" alt="Logo" />
+   <h1 class="title"><?= $title ?></h1>
+   ```
+   In this approach, you're using the short echo tags `<?= ... ?>`, which are a shorthand way of echoing variables in PHP. They automatically output the result of the expression within the tags. It's a more concise and cleaner way to echo variables.
+
+2. **Using `<?php echo ... ?>`:**
+   ```html
+   <img src="<?php echo $pathImages['logo'] ?>" alt="Logo" />
+   <h1 class="title"><?php echo $title ?></h1>
+   ```
+   In this approach, you're using the traditional PHP syntax to echo variables. You explicitly use `<?php echo ... ?>` to output the content of the variable.
+
+Both approaches achieve the same result, which is to insert the value of the variable into the HTML. However, the first approach using `<?= ... ?>` is considered more modern and concise, making the code cleaner and easier to read. It's often preferred in newer PHP code because it reduces verbosity.
