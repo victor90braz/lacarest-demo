@@ -145,6 +145,12 @@
         $greeting =  "Welcome to " . $title;
     }
 
+    $categories = [
+            "all categories","children's","fashion & beauty",
+            "footwear","home & tech","sports","travel","gourmet"
+    ];
+
+
 ?>
 
 <div class="container">
@@ -170,14 +176,13 @@
 
     <nav class="container-main_categories">
         <ul>
-            <li>all categories</li>
-            <li>children's</li>
-            <li>fashion & beauty</li>
-            <li>footwear</li>
-            <li>home & tech</li>
-            <li>sports</li>
-            <li>travel</li>
-            <li>gourmet</li>
+            <li>
+                <?php
+                foreach ($categories as $category) {
+                    echo "<li>$category</li>";
+                }
+                ?>
+            </li>
         </ul>
     </nav>
 
