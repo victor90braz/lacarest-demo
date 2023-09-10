@@ -12,6 +12,8 @@
 </head>
 <body>
 <?php
+$data = include 'storeData.php';
+
 $pathImages = [
     "menu" => "public/images/menu.png",
     "logo" => "public/images/logo.png",
@@ -25,17 +27,6 @@ $register = "register";
 $logged = false;
 
 $greeting = !$logged ? "Please $register" : "Welcome to $title";
-
-$categories = [
-    "all" => "All Categories",
-    "children" => "Children's",
-    "fashion_beauty" => "Fashion & Beauty",
-    "footwear" => "Footwear",
-    "home_tech" => "Home & Tech",
-    "sports" => "Sports",
-    "travel" => "Travel",
-    "gourmet" => "Gourmet"
-];
 ?>
 
 <div class="container">
@@ -61,7 +52,7 @@ $categories = [
 
     <nav class="container-main_categories">
         <ul>
-            <?php foreach ($categories as $category) : ?>
+            <?php foreach ($data["categories"] as $category) : ?>
                 <li><?= $category ?></li>
             <?php endforeach; ?>
         </ul>
