@@ -58,18 +58,28 @@
             justify-content: center;
         }
 
-        .container-info {
-            justify-content: flex-end;
-        }
-
         h1 {
             font-size: 1.1em;
+        }
+
+        .container-info {
+            gap: 25px;
+        }
+
+        .container-info_about {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
         }
 
         .container-info_register {
             border: 1px solid black;
             padding: 10px;
             border-radius: 5px;
+        }
+
+        .info-image{
+            margin: 2px;
         }
 
     </style>
@@ -97,8 +107,12 @@
                 $aboutUs = "about us";
                 $register = "register"
                 ?>
-                <img src="public/images/info.png" alt="info icon" />
-                <span class="about"><?php echo $aboutUs ?></span>
+
+                <div class="container-info_about">
+                    <img class="info-image" src="public/images/info.png" alt="info icon" />
+                    <span ><?php echo $aboutUs ?></span>
+                </div>
+
                 <span class="container-info_register"><?php echo $register ?></span>
             </section>
         </header>
