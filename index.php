@@ -97,7 +97,6 @@
         }
 
         .container-main_categories{
-            border: 1px solid green;
             padding: 10px
         }
         .container-main_categories ul{
@@ -109,6 +108,14 @@
             align-items: center;
             width: 100%;
             padding: 0;
+        }
+
+        .container-main_categories ul li:hover {
+            background-color: #0080007d;
+            color: white;
+            padding: 2px;
+            border-radius: 5px;
+            cursor: pointer;
         }
 
     </style>
@@ -164,13 +171,13 @@
     <nav class="container-main_categories">
         <ul>
             <li>all categories</li>
-            <li>Children's</li>
-            <li>Fashion & Beauty</li>
-            <li>Footwear</li>
-            <li>Home & Tech</li>
-            <li>Sports</li>
-            <li>Travel</li>
-            <li>Gourmet</li>
+            <li>children's</li>
+            <li>fashion & beauty</li>
+            <li>footwear</li>
+            <li>home & tech</li>
+            <li>sports</li>
+            <li>travel</li>
+            <li>gourmet</li>
         </ul>
     </nav>
 
