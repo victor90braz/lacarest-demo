@@ -30,6 +30,7 @@
             flex-wrap: wrap;
             justify-content: space-around;
             align-items: center;
+            padding: 5px;
         }
 
         img {
@@ -82,6 +83,18 @@
         .info-image {
             margin: 2px;
         }
+
+        .container-main {
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 70vh;
+        }
+        .container-main_greeting {
+            text-transform: uppercase;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -99,6 +112,16 @@
     $aboutUs = "about us";
 
     $register = "register";
+
+    $logged = false;
+    $greeting = "";
+
+    if (!$logged) {
+        $greeting =  "Please " . $register;
+    } else {
+        $greeting =  "Welcome to " . $title;
+    }
+
 ?>
 
 <div class="container">
@@ -121,6 +144,12 @@
             <span class="container-info_register"><?php echo $register ?></span>
         </section>
     </header>
+
+    <main class="container-main">
+        <span class="container-main_greeting">
+            <?php echo $greeting ?>
+        </span>
+    </main>
 </div>
 </body>
 </html>
