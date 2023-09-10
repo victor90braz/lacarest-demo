@@ -10,8 +10,8 @@
 <body>
     <h1>
         <?php
-            $title = "hello world php";
-            echo $title;
+            $tittle = "hello world php";
+            echo $tittle;
         ?>
     </h1>
 </body>
