@@ -58,7 +58,7 @@
             justify-content: center;
         }
 
-        h1 {
+        .title {
             font-size: 1.1em;
         }
 
@@ -81,7 +81,6 @@
         .info-image{
             margin: 2px;
         }
-
     </style>
 </head>
 <body>
@@ -94,7 +93,7 @@
 
             <section class="container-title">
                 <img src="public/images/logo.png" alt="logo icon" />
-                <h1>
+                <h1 class="title">
                     <?php
                     $title = "privalia shop";
                     echo $title;
