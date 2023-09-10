@@ -12,7 +12,7 @@
 </head>
 <body>
 <?php
-$data = include 'storeData.php';
+$storeData = include 'storeData.php';
 
 $pathImages = [
     "menu" => "public/images/menu.png",
@@ -52,7 +52,7 @@ $greeting = !$logged ? "Please $register" : "Welcome to $title";
 
     <nav class="container-main_categories">
         <ul>
-            <?php foreach ($data["categories"] as $category) : ?>
+            <?php foreach ($storeData["categories"] as $category) : ?>
                 <li><?= $category ?></li>
             <?php endforeach; ?>
         </ul>
