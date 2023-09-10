@@ -27,8 +27,14 @@ $logged = false;
 $greeting = !$logged ? "Please $register" : "Welcome to $title";
 
 $categories = [
-    "all categories", "children's", "fashion & beauty",
-    "footwear", "home & tech", "sports", "travel", "gourmet"
+    "all" => "All Categories",
+    "children" => "Children's",
+    "fashion_beauty" => "Fashion & Beauty",
+    "footwear" => "Footwear",
+    "home_tech" => "Home & Tech",
+    "sports" => "Sports",
+    "travel" => "Travel",
+    "gourmet" => "Gourmet"
 ];
 ?>
 
