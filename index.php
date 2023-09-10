@@ -95,6 +95,22 @@
             text-transform: uppercase;
             font-weight: bold;
         }
+
+        .container-main_categories{
+            border: 1px solid green;
+            padding: 10px
+        }
+        .container-main_categories ul{
+            display: flex;
+            list-style-type: none;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 0;
+        }
+
     </style>
 </head>
 <body>
@@ -113,7 +129,7 @@
 
     $register = "register";
 
-    $logged = false;
+    $logged = true;
     $greeting = "";
 
     if (!$logged) {
@@ -145,9 +161,22 @@
         </section>
     </header>
 
+    <nav class="container-main_categories">
+        <ul>
+            <li>all categories</li>
+            <li>Children's</li>
+            <li>Fashion & Beauty</li>
+            <li>Footwear</li>
+            <li>Home & Tech</li>
+            <li>Sports</li>
+            <li>Travel</li>
+            <li>Gourmet</li>
+        </ul>
+    </nav>
+
     <main class="container-main">
         <span class="container-main_greeting">
-            <?php echo $greeting ?>
+            <?= $greeting ?>
         </span>
     </main>
 </div>
