@@ -28,7 +28,7 @@
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center
         }
 
@@ -50,18 +50,16 @@
         }
 
         .container-menu {
-            justify-content: flex-start;
-            flex: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .container-title {
             justify-content: center;
-            flex: 1.5
         }
 
         .container-info {
             justify-content: flex-end;
-            flex: 1.5;
         }
 
         h1 {
