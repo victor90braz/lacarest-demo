@@ -63,7 +63,9 @@
         }
 
         .container-info_about {
+            display: flex;
             flex-direction: column;
+            align-items: center;
         }
 
         .container-info_register {
@@ -122,7 +124,7 @@ $menu = "menu";
 $title = "privalia shop";
 $aboutUs = "about us";
 $register = "register";
-$logged = true;
+$logged = false;
 
 $greeting = !$logged ? "Please $register" : "Welcome to $title";
 
