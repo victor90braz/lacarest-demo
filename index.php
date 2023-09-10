@@ -104,13 +104,13 @@
 <div class="container">
     <header>
         <menu class="container-menu">
-            <img src="<?php echo $pathImageMenu; ?>" alt="<?php echo $descriptionMenu; ?>" />
+            <img src="<?php echo $pathImageMenu ?>" alt="<?php echo $descriptionMenu ?>" />
             <span><?php echo $menu ?></span>
         </menu>
 
         <section class="container-title">
             <img src="<?php echo $pathImageLogo ?>" alt="<?php echo $descriptionTitle ?>" />
-            <h1 class="title"><?php echo $title; ?></h1>
+            <h1 class="title"><?php echo $title ?></h1>
         </section>
 
         <section class="container-info">
