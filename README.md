@@ -14,15 +14,14 @@ terminal CMD
 - php -h
 - PHP -S localhost:8888
 
-
 Double Quotes (" "):
 
 Variables enclosed in double quotes will be replaced with their values. This is known as variable interpolation.
 Escape sequences (e.g., \n, \t, \") are interpreted and converted to special characters.
 Example:
 $name = "John";
-echo "Hello, $name!"; // Outputs: Hello, John!
-
+echo "Hello, $name!"; 
+// Outputs: Hello, John!
 
 Single Quotes (' '):
 
@@ -31,4 +30,6 @@ Escape sequences are not interpreted within single quotes. Everything inside sin
 Example:
 
 $name = "John";
-echo 'Hello, $name!'; // Outputs: Hello, $name!
+echo 'Hello, $name!'; 
+// Outputs: Hello, $name!
+
