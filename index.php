@@ -86,8 +86,8 @@
 </head>
 <body>
 <?php
-    $menu = "menu";
     $pathImageMenu = "public/images/menu.png";
+    $menu = "menu";
     $descriptionMenu = "menu icon";
 
     $pathImageLogo = "public/images/logo.png";
@@ -97,6 +97,7 @@
     $pathImageInfo = "public/images/info.png";
     $descriptionInfo = "info icon";
     $aboutUs = "about us";
+
     $register = "register";
 ?>
 
