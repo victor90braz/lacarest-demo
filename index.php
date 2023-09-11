@@ -42,21 +42,14 @@
         return $filteredData;
     }
 
-    function filterPrice($products, $key) {
-        $filteredPrices = [];
-
-        foreach ($products as $product) {
-            if(($product[$key] < 25 ) || ($product[$key] > 60) ) {
-                $filteredPrices[] = $product[$key];
-            }
-        }
-
-        return $filteredPrices;
+    function filterProductsByPrice($products, $key) {
+        return array_filter($products, function ($product) use ($key) {
+            return ($product[$key] < 25) || ($product[$key] > 60);
+        });
     }
 
     $filteredUsers = filterData($storeData["users"], "username", "user123");
-    $filteredPrices = filterPrice($storeData["products"], "price");
-
+    $filteredPrices = filterProductsByPrice($storeData["products"], "price");
 ?>
 
 <div class="container">
@@ -137,10 +130,9 @@
         <section class="container-prices">
             <h3>Filter Prices</h3>
             <?php foreach ($filteredPrices as $price) :?>
-                <p><?= $price ?></p>
+                <p><?= $price['price']?></p>
             <?php endforeach; ?>
         </section>
-
     </main>
 </div>
 </body>
