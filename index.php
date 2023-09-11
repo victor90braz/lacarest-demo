@@ -107,11 +107,14 @@ function filterByUsers($storeData) {
 
         <section class="container-user">
             <h3>Search user</h3>
-            <p>
-                <?php foreach (filterByUsers($storeData) as $user) : ?>
-                    <?= $user["name"] ?>
-                <?php endforeach; ?>
-            </p>
+            <?php foreach (filterByUsers($storeData) as $user) : ?>
+                <p> <?= $user["name"] ?> </p>
+                <p> <?= $user["address"] ?> </p>
+                <p> <?= $user["city"] ?> </p>
+                <p> <?= $user["address"] ?> </p>
+                <p> <?= $user["country"] ?> </p>
+                <p> <?= $user["email"] ?> </p>
+            <?php endforeach; ?>
         </section>
     </main>
 </div>
