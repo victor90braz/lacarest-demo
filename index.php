@@ -39,6 +39,7 @@ function filterData($dataArray, $filterKey, $filterValue) {
 
     return $filteredData;
 }
+
 function filterPrice($products, $key) {
     $filteredPrices = [];
 
