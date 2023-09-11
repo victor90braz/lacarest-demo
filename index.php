@@ -28,7 +28,7 @@ $logged = false;
 
 $greeting = !$logged ? "Please $register" : "Welcome to $title";
 
-function filterByUsers($storeData, $username) {
+$filterByUsers = function  ($storeData, $username) {
     $userFilter = [];
 
     foreach ($storeData["users"] as $user) {
@@ -40,7 +40,7 @@ function filterByUsers($storeData, $username) {
     return $userFilter;
 };
 
-$users = filterByUsers($storeData, "user123");
+$users = $filterByUsers($storeData, "user123");
 
 ?>
 
