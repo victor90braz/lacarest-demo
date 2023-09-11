@@ -39,7 +39,6 @@ function filterData($dataArray, $filterKey, $filterValue) {
 
     return $filteredData;
 }
-$filteredUsers = filterData($storeData["users"], "username", "user123");
 function filterPrice($products, $key) {
     $filteredPrices = [];
 
@@ -52,9 +51,8 @@ function filterPrice($products, $key) {
     return $filteredPrices;
 }
 
+$filteredUsers = filterData($storeData["users"], "username", "user123");
 $filteredPrices = filterPrice($storeData["products"], "price");
-
-
 
 ?>
 
