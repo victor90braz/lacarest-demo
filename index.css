@@ -172,7 +172,7 @@ img {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.container-user h3, .container-prices {
+.container-user h3, .container-prices h3{
     font-size: 1.2em;
     margin-bottom: 15px;
     text-align: center;

@@ -123,6 +123,7 @@ $filteredPrices = filterPrice($storeData,"products", 0, "price");
         </section>
 
         <section class="container-prices">
+            <h3>Filter Prices</h3>
             <p>
                 <?= $filteredPrices ?>
             </p>
