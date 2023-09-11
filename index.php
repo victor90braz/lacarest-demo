@@ -27,6 +27,19 @@ $register = "register";
 $logged = false;
 
 $greeting = !$logged ? "Please $register" : "Welcome to $title";
+
+function filterByUsers($storeData) {
+    $userFilter = [];
+
+    foreach ($storeData["users"] as $user) {
+       if($user["username"] === "user123") {
+           $userFilter[] = $user;
+       }
+    }
+
+    return $userFilter;
+};
+
 ?>
 
 <div class="container">
@@ -90,6 +103,15 @@ $greeting = !$logged ? "Please $register" : "Welcome to $title";
                     <?php endif; ?>
                 <?php endforeach; ?>
             </div>
+        </section>
+
+        <section class="container-user">
+            <h3>Search user</h3>
+            <p>
+                <?php foreach (filterByUsers($storeData) as $user) : ?>
+                    <?= $user["name"] ?>
+                <?php endforeach; ?>
+            </p>
         </section>
     </main>
 </div>

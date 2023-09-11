@@ -132,6 +132,12 @@ h2 {
     align-items: center;
 }
 
+.container-user {
+    margin-top: 10px;
+    border: 1px solid black;
+    padding: 10px ;
+}
+
 
 
 
