@@ -28,19 +28,19 @@ $logged = false;
 
 $greeting = !$logged ? "Please $register" : "Welcome to $title";
 
-$filterByUsers = function  ($storeData, $username) {
-    $userFilter = [];
+function filterData($dataArray, $filterKey, $filterValue) {
+    $filteredData = [];
 
-    foreach ($storeData["users"] as $user) {
-       if($user["username"] === $username) {
-           $userFilter[] = $user;
-       }
+    foreach ($dataArray as $item) {
+        if (isset($item[$filterKey]) && $item[$filterKey] === $filterValue) {
+            $filteredData[] = $item;
+        }
     }
 
-    return $userFilter;
-};
+    return $filteredData;
+}
 
-$users = $filterByUsers($storeData, "user123");
+$filteredUsers = filterData($storeData["users"], "username", "user123");
 
 ?>
 
@@ -109,7 +109,7 @@ $users = $filterByUsers($storeData, "user123");
 
         <section class="container-user">
             <h3>Search user</h3>
-            <?php foreach ($users as $user) : ?>
+            <?php foreach ($filteredUsers as $user) : ?>
                 <p> <?= $user["name"] ?> </p>
                 <p> <?= $user["address"] ?> </p>
                 <p> <?= $user["city"] ?> </p>
