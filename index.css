@@ -132,14 +132,13 @@ h2 {
     align-items: center;
 }
 
-/* CSS for user information section */
 .container-user {
     margin-top: 10px;
     border: 1px solid #ccc;
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .container-user h3 {
@@ -148,15 +147,13 @@ h2 {
     text-align: center;
 }
 
-/* Style for user paragraphs */
 .container-user p {
     margin: 10px 0;
     font-size: 1em;
 }
 
-/* Hover effect */
 .container-user p:hover {
-    background-color: #0080007d; /* Light green with some transparency */
+    background-color: #0080007d;
     color: white;
     padding: 5px;
     border-radius: 5px;
