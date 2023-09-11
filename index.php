@@ -39,9 +39,12 @@ function filterData($dataArray, $filterKey, $filterValue) {
 
     return $filteredData;
 }
+function filterPrice($storeData, $array, $index, $key) {
+    return $storeData[$array][$index][$key];
+}
 
 $filteredUsers = filterData($storeData["users"], "username", "user123");
-
+$filteredPrices = filterPrice($storeData,"products", 0, "price");
 ?>
 
 <div class="container">
@@ -117,6 +120,12 @@ $filteredUsers = filterData($storeData["users"], "username", "user123");
                 <p> <?= $user["country"] ?> </p>
                 <p> <?= $user["email"] ?> </p>
             <?php endforeach; ?>
+        </section>
+
+        <section class="container-prices">
+            <p>
+                <?= $filteredPrices ?>
+            </p>
         </section>
     </main>
 </div>

@@ -163,7 +163,7 @@ img {
 }
 
 /* User section styles */
-.container-user {
+.container-user, .container-prices {
     margin-top: 20px;
     border: 1px solid #ccc;
     padding: 20px;
@@ -172,18 +172,18 @@ img {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.container-user h3 {
+.container-user h3, .container-prices {
     font-size: 1.2em;
     margin-bottom: 15px;
     text-align: center;
 }
 
-.container-user p {
+.container-user p, .container-prices p {
     margin: 10px 0;
     font-size: 1em;
 }
 
-.container-user p:hover {
+.container-user p:hover,.container-prices p:hover {
     background-color: #0080007d;
     color: white;
     padding: 5px;
