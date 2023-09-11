@@ -13,21 +13,17 @@
 <body>
 
 <?php
-
     $storeData = include 'storeData.php';
-
     $pathImages = [
         "menu" => "public/images/menu.png",
         "logo" => "public/images/logo.png",
         "info" => "public/images/info.png",
     ];
-
     $menu = "menu";
     $title = "privalia shop";
     $aboutUs = "about us";
     $register = "register";
     $logged = false;
-
     $greeting = !$logged ? "Please $register" : "Welcome to $title";
 
     function filterData($dataArray, $filterKey, $filterValue) {
