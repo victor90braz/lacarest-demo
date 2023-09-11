@@ -12,48 +12,49 @@
 </head>
 <body>
 <?php
-$storeData = include 'storeData.php';
 
-$pathImages = [
-    "menu" => "public/images/menu.png",
-    "logo" => "public/images/logo.png",
-    "info" => "public/images/info.png",
-];
+    $storeData = include 'storeData.php';
 
-$menu = "menu";
-$title = "privalia shop";
-$aboutUs = "about us";
-$register = "register";
-$logged = false;
+    $pathImages = [
+        "menu" => "public/images/menu.png",
+        "logo" => "public/images/logo.png",
+        "info" => "public/images/info.png",
+    ];
 
-$greeting = !$logged ? "Please $register" : "Welcome to $title";
+    $menu = "menu";
+    $title = "privalia shop";
+    $aboutUs = "about us";
+    $register = "register";
+    $logged = false;
 
-function filterData($dataArray, $filterKey, $filterValue) {
-    $filteredData = [];
+    $greeting = !$logged ? "Please $register" : "Welcome to $title";
 
-    foreach ($dataArray as $item) {
-        if (isset($item[$filterKey]) && $item[$filterKey] === $filterValue) {
-            $filteredData[] = $item;
+    function filterData($dataArray, $filterKey, $filterValue) {
+        $filteredData = [];
+
+        foreach ($dataArray as $item) {
+            if (isset($item[$filterKey]) && $item[$filterKey] === $filterValue) {
+                $filteredData[] = $item;
+            }
         }
+
+        return $filteredData;
     }
 
-    return $filteredData;
-}
+    function filterPrice($products, $key) {
+        $filteredPrices = [];
 
-function filterPrice($products, $key) {
-    $filteredPrices = [];
-
-    foreach ($products as $product) {
-        if($product[$key] < 25 ) {
-            $filteredPrices[] = $product[$key];
+        foreach ($products as $product) {
+            if($product[$key] < 25 ) {
+                $filteredPrices[] = $product[$key];
+            }
         }
+
+        return $filteredPrices;
     }
 
-    return $filteredPrices;
-}
-
-$filteredUsers = filterData($storeData["users"], "username", "user123");
-$filteredPrices = filterPrice($storeData["products"], "price");
+    $filteredUsers = filterData($storeData["users"], "username", "user123");
+    $filteredPrices = filterPrice($storeData["products"], "price");
 
 ?>
 
