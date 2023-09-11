@@ -59,7 +59,22 @@ $greeting = !$logged ? "Please $register" : "Welcome to $title";
     </nav>
 
     <main class="container-main">
-        <span class="container-main_greeting"><?= $greeting ?></span>
+        <section class="container-main_greeting"><?= $greeting ?></section>
+        <section class="container-main_products">
+
+            <h2>List of Products</h2>
+
+            <div class="container-products">
+                <?php foreach ($storeData["products"] as $product) : ?>
+                    <ul class="list-products">
+                        <li><?=$product["name"] ?></li>
+                        <li><?=$product["category"] ?></li>
+                        <li><?=$product["price"] ?></li>
+                        <li><?=$product["description"] ?></li>
+                    </ul>
+                <?php endforeach; ?>
+            </div>
+        </section>
     </main>
 </div>
 </body>

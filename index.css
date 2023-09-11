@@ -6,11 +6,10 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    background: #D47597;
 }
 
 .container {
-    height: 100vh;
-    background: #D47597;
     padding: 20px;
 }
 
@@ -67,17 +66,10 @@ img {
     margin: 2px;
 }
 
-.container-main {
-    border: 1px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 70vh;
-}
-
 .container-main_greeting {
     text-transform: uppercase;
     font-weight: bold;
+    display: none;
 }
 
 .container-main_categories {
@@ -99,3 +91,36 @@ img {
     border-radius: 5px;
     cursor: pointer;
 }
+
+.container-main_products {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.container-products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.list-products {
+    display: flex;
+    border: 1px solid white;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+    min-width: 45%;
+}
+
+
+
