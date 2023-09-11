@@ -46,7 +46,7 @@
         $filteredPrices = [];
 
         foreach ($products as $product) {
-            if($product[$key] < 25 ) {
+            if(($product[$key] < 25 ) || ($product[$key] > 60) ) {
                 $filteredPrices[] = $product[$key];
             }
         }
