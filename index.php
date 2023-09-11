@@ -39,12 +39,23 @@ function filterData($dataArray, $filterKey, $filterValue) {
 
     return $filteredData;
 }
-function filterPrice($storeData, $array, $index, $key) {
-    return $storeData[$array][$index][$key];
+$filteredUsers = filterData($storeData["users"], "username", "user123");
+function filterPrice($products, $key) {
+    $filteredPrices = [];
+
+    foreach ($products as $product) {
+        if($product[$key] < 25 ) {
+            $filteredPrices[] = $product[$key];
+        }
+    }
+
+    return $filteredPrices;
 }
 
-$filteredUsers = filterData($storeData["users"], "username", "user123");
-$filteredPrices = filterPrice($storeData,"products", 0, "price");
+$filteredPrices = filterPrice($storeData["products"], "price");
+
+
+
 ?>
 
 <div class="container">
@@ -124,10 +135,11 @@ $filteredPrices = filterPrice($storeData,"products", 0, "price");
 
         <section class="container-prices">
             <h3>Filter Prices</h3>
-            <p>
-                <?= $filteredPrices ?>
-            </p>
+            <?php foreach ($filteredPrices as $price) :?>
+                <p><?= $price ?></p>
+            <?php endforeach; ?>
         </section>
+
     </main>
 </div>
 </body>
