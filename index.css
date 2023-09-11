@@ -1,11 +1,9 @@
-/* Reset some default styles */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Global styles */
 body {
     font-family: 'Roboto', sans-serif;
     background: #D47597;
@@ -19,7 +17,6 @@ h1, h2, h3 {
     text-transform: uppercase;
 }
 
-/* Header styles */
 .container-header {
     display: flex;
     justify-content: space-around;
@@ -79,7 +76,6 @@ img {
     display: none;
 }
 
-/* Main categories styles */
 .container-main_categories {
     padding: 10px;
 }
@@ -100,7 +96,6 @@ img {
     cursor: pointer;
 }
 
-/* List of Products styles */
 .container-main_products {
     margin-top: 20px;
     padding: 20px;
@@ -133,7 +128,6 @@ img {
     cursor: pointer;
 }
 
-/* Detail Product styles */
 .container-main_detail {
     margin-top: 20px;
     padding: 20px;
@@ -166,7 +160,6 @@ img {
     cursor: pointer;
 }
 
-/* User section styles */
 .container-user, .container-prices {
     margin-top: 20px;
     border: 1px solid #ccc;
