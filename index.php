@@ -11,6 +11,7 @@
     <title>Privalia Shop</title>
 </head>
 <body>
+
 <?php
 
     $storeData = include 'storeData.php';
