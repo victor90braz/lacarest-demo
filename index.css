@@ -111,7 +111,7 @@ h2 {
     justify-content: center;
 }
 
-.list-products {
+.list-products, .container-main_detail {
     display: flex;
     border: 1px solid white;
     flex-direction: column;
@@ -121,6 +121,16 @@ h2 {
     padding: 20px;
     min-width: 45%;
 }
+
+.container-main_detail {
+    margin: 10px;
+    display: flex;
+    border: 1px solid white;
+    flex-direction: column;
+    background: chocolate;
+    align-items: center;
+}
+
 
 
 
